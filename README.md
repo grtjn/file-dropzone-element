@@ -45,17 +45,17 @@ Embedding in Vue.js:
 
 - Use it in any component:
 
-    <file-dropzone
-        button="false"
-        multiple="multiple"
-        v-on:drop="sendFile"
-        v-on:drop-all="sendAllFiles"
-        v-on:file-double-click="openFile">
-      <div slot="intro">
-        <p><strong>Drop files here or click to select files.</strong></p>
-        <em>(Files will be uploaded automatically)</em>
-      </div>
-    </file-dropzone>
+        <file-dropzone
+            button="false"
+            multiple="multiple"
+            v-on:drop="sendFile"
+            v-on:drop-all="sendAllFiles"
+            v-on:file-double-click="openFile">
+          <div slot="intro">
+            <p><strong>Drop files here or click to select files.</strong></p>
+            <em>(Files will be uploaded automatically)</em>
+          </div>
+        </file-dropzone>
 
 ## Test locally
 
