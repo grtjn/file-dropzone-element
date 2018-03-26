@@ -23,8 +23,7 @@
     <link rel="import" href="../file-dropzone.html">
       -->
 
-    <style>
-    </style>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
   </head>
   <body ng-app="app">
     <h1>Native Web Component for a dropzone to support uploading of binary files</h1>
@@ -42,5 +41,25 @@
       </div>
     </file-dropzone>
     <script src="https://cdn.rawgit.com/webcomponents/webcomponentsjs/master/webcomponents-hi.js" type="text/javascript" defer></script>
+    <script>
+      function sendFile(e) {
+        var progress = e.detail;
+        console.log(["sendFile", progress]);
+        progress.update(0);
+        setTimeout(function() {
+          progress.update(Math.random() * 100);
+          setTimeout(function() {
+            if (Math.random() > 0.5) {
+              progress.update(100);
+            } else {
+              progress.error("upload failed");
+            }
+          }, Math.random() * 5000);
+        }, Math.random() * 5000);
+      }
+      document
+      .getElementsByTagName("file-dropzone")[0]
+      .addEventListener("drop", sendFile);
+    </script>
   </body>
 </html>
