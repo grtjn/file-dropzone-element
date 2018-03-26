@@ -1,0 +1,30 @@
+{
+  "name": "file-dropzone-element",
+  "version": "0.0.1",
+  "description": "Native Web Component for a dropzone to support uploading of binary files",
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "Apache-2.0",
+  "directories": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/grtjn/file-dropzone-element.git"
+  },
+  "keywords": [
+    "web-component",
+    "javascript",
+    "html5",
+    "dropzone",
+    "file",
+    "marklogic"
+  ],
+  "author": "grtjn",
+  "bugs": {
+    "url": "https://github.com/grtjn/file-dropzone-element/issues"
+  },
+  "homepage": "http://grtjn.github.io/file-dropzone-element/"
+}
