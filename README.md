@@ -34,7 +34,7 @@ Static example:
       </div>
     </file-dropzone>
 
-Emits events 'drop', 'drop-all', 'file-double-click'.
+Emits events 'drop', 'drop-all', 'file-dblclick'.
 
 Embedding in Vue.js:
 
@@ -50,7 +50,7 @@ Embedding in Vue.js:
             multiple="multiple"
             v-on:drop="sendFile"
             v-on:drop-all="sendAllFiles"
-            v-on:file-double-click="openFile">
+            v-on:file-dblclick="openFile">
           <div slot="intro">
             <p><strong>Drop files here or click to select files.</strong></p>
             <em>(Files will be uploaded automatically)</em>

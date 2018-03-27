@@ -212,7 +212,8 @@
   //      button="false"
   //      multiple="true"
   //      @drop=""
-  //      @double-click="">
+  //      @drop-all=""
+  //      @file-dblclick="">
   //    <p><strong>Drop files here or click to select files.</strong></p>
   //    <em>(Files will be uploaded automatically)</em>
   //  </file-dropzone>
@@ -547,7 +548,7 @@
           e.stopPropagation();
 
           // Throw drop-all event that can be captured from outside your component
-          this.dispatchEvent(new CustomEvent("file-double-click", {
+          this.dispatchEvent(new CustomEvent("file-dblclick", {
             detail: e.target.progress,
             bubbles: true,
           }));
