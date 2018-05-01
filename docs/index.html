@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>view-binary-element</title>
+    <meta name="description" content="">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link rel="import" href="https://cdn.rawgit.com/grtjn/file-dropzone-element/master/file-dropzone.html">
+    <!-- For local debugging:
+      - replace import above with import below
+      - run something like `python -m SimpleHTTPServer 8888` from project root
+      - open http://localhost:8888/docs/
+    <link rel="import" href="../file-dropzone.html">
+      -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
+  </head>
+  <body ng-app="app">
+    <h1>Native Web Component for a dropzone to support uploading of binary files</h1>
+    <ul>
+      <li>Leverages HTML5 (multi) file input</li>
+      <li>Emits events 'drop', 'drop-all', 'file-double-click'</li>
+      <li>Allows keeping track of progress or failure via objects in event details</li>
+    </ul>
+    <file-dropzone
+        button="false"
+        multiple="multiple">
+      <div slot="intro">
+        <p><strong>Drop files here or click to select files.</strong></p>
+        <em>(Files will be uploaded automatically)</em>
+      </div>
+    </file-dropzone>
+    <script src="https://cdn.rawgit.com/webcomponents/webcomponentsjs/master/webcomponents-hi.js" type="text/javascript" defer></script>
+    <script>
+      function sendFile(e) {
+        var progress = e.detail;
+        console.log(["sendFile", progress]);
+        progress.update(0);
+        setTimeout(function() {
+          progress.update(Math.random() * 100);
+          setTimeout(function() {
+            if (Math.random() > 0.5) {
+              progress.update(100);
+            } else {
+              progress.error("upload failed");
+            }
+          }, Math.random() * 5000);
+        }, Math.random() * 5000);
+      }
+      document
+      .getElementsByTagName("file-dropzone")[0]
+      .addEventListener("drop", sendFile);
+    </script>
+  </body>
+</html>
