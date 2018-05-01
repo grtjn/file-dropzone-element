@@ -220,6 +220,9 @@
 
   (function() {
 
+    // Make sure to look inside this html fragement (in case of true html import)
+    const doc = document.currentScript ? (document.currentScript.ownerDocument || document) : document;
+
     // Progress helper object
     var Progress = {};
 
@@ -402,9 +405,6 @@
           // instant stub polyfill for shadowRoot
           this.shadowRoot = this;
         }
-
-        // Make sure to look inside this html fragement (in case of true html import)
-        const doc = document.currentScript ? (document.currentScript.ownerDocument || document) : document;
 
         // get and append template
         const template = doc
