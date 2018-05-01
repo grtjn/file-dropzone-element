@@ -1,6 +1,6 @@
 {
   "name": "file-dropzone-element",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Native Web Component for a dropzone to support uploading of binary files",
   "dependencies": {},
   "devDependencies": {},

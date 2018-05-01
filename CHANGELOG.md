@@ -1,5 +1,18 @@
 # Change Log
 
+## [0.0.2](https://github.com/grtjn/file-dropzone-element/tree/0.0.2) (2018-05-01)
+[Full Changelog](https://github.com/grtjn/file-dropzone-element/compare/0.0.1...0.0.2)
+
+**Implemented enhancements:**
+
+- Document how to use with NPM and html-loader [\#9](https://github.com/grtjn/file-dropzone-element/issues/9)
+- Document how to use with bower, wiredep, and gulp [\#8](https://github.com/grtjn/file-dropzone-element/issues/8)
+- Document how to use in Angular.js [\#7](https://github.com/grtjn/file-dropzone-element/issues/7)
+
+**Fixed bugs:**
+
+- currentScript is null \(in Chrome\) [\#6](https://github.com/grtjn/file-dropzone-element/issues/6)
+
 ## [0.0.1](https://github.com/grtjn/file-dropzone-element/tree/0.0.1) (2018-03-26)
 **Implemented enhancements:**
 
