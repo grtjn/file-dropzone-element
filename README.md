@@ -17,7 +17,7 @@ Simplest way:
 
 Likely together with this polyfill:
 
-    <script src="https://cdn.rawgit.com/webcomponents/webcomponentsjs/master/webcomponents-hi.js" type="text/javascript" defer></script>
+    <script src="https://cdn.rawgit.com/webcomponents/webcomponentsjs/v1.2.0/webcomponents-hi.js" type="text/javascript" defer></script>
 
 ### NPM and html-loader
 
@@ -62,7 +62,7 @@ Add this to your index.html:
     <!-- endbower -->
 
     <!-- @exclude -->
-    <script src="https://cdn.rawgit.com/webcomponents/webcomponentsjs/master/webcomponents-hi.js" type="text/javascript" defer></script>
+    <script src="https://cdn.rawgit.com/webcomponents/webcomponentsjs/v1.2.0/webcomponents-hi.js" type="text/javascript" defer></script>
     <!-- @endexclude -->
 
 This relies on the html-import polyfill loaded from CDN. If you prefer not to rely on that, or if your tooling builds minified versions of everything, you can include the html similarly to html-loader mentioned above in NPM, and strip off the polyfill using gulp-preprocessor roughly like this:
@@ -87,6 +87,7 @@ Emits events 'drop', 'drop-all', 'file-dblclick'.
 
 ### Plaing HTML and JavaScript
 
+- Assumes CDN and polyfill installation
 - In your html:
 
         <file-dropzone
@@ -121,7 +122,7 @@ Emits events 'drop', 'drop-all', 'file-dblclick'.
 
 ### Vue.js
 
-- Import or include the web component in your index.html
+- Import or include the web component in your index.html (see for instance NPM and html-loader installation)
 - Add `file-dropzone` to ignoreElements to stop it from squeaking:
 
         Vue.config.ignoredElements = ["file-dropzone"];
@@ -142,6 +143,7 @@ Emits events 'drop', 'drop-all', 'file-dblclick'.
 
 ### AngularJS
 
+- Assumes Bower, wiredep, and gulp installation
 - In your html template:
 
         <file-dropzone
@@ -181,7 +183,6 @@ Emits events 'drop', 'drop-all', 'file-dblclick'.
           });
 
         }
-
 
 ## Test locally
 
