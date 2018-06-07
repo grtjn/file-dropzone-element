@@ -1,5 +1,12 @@
 # Change Log
 
+## [0.0.3](https://github.com/grtjn/file-dropzone-element/tree/0.0.3) (2018-06-07)
+[Full Changelog](https://github.com/grtjn/file-dropzone-element/compare/0.0.2...0.0.3)
+
+**Fixed bugs:**
+
+- HTML imports is removed from webcomponents in v2 [\#10](https://github.com/grtjn/file-dropzone-element/issues/10)
+
 ## [0.0.2](https://github.com/grtjn/file-dropzone-element/tree/0.0.2) (2018-05-01)
 [Full Changelog](https://github.com/grtjn/file-dropzone-element/compare/0.0.1...0.0.2)
 
